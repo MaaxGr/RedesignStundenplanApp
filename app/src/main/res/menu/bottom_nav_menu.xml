@@ -2,18 +2,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/navigation_songs"
-        android:icon="@drawable/ic_launcher_background"
-        android:title="Songs"/>
+        android:id="@+id/nav_timetable"
+        android:icon="@drawable/ic_view_list_black_24dp"
+        android:title="Stundenplan"/>
 
     <item
-        android:id="@+id/navigation_albums"
-        android:icon="@drawable/ic_launcher_background"
-        android:title="Albums"/>
+        android:id="@+id/nav_changement"
+        android:icon="@drawable/ic_compare_arrows_black_24dp"
+        android:title="Änderungen"/>
 
     <item
-        android:id="@+id/navigation_artists"
-        android:icon="@drawable/ic_launcher_background"
-        android:title="Artists"/>
+        android:id="@+id/nav_diet"
+        android:icon="@drawable/ic_local_pizza_black_24dp"
+        android:title="Speiseplan"/>
 
 </menu>
