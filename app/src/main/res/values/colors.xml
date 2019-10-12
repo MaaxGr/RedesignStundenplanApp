@@ -8,4 +8,7 @@
     <color name="white">#fff</color>
     <color name="black">#000</color>
 
+    <color name="universityYellow">#EAB81A</color>
+    <color name="universityBlue">#0073FF</color>
+
 </resources>

@@ -14,8 +14,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginEnd="8dp"
-        >
+        android:layout_marginEnd="8dp">
 
         <LinearLayout
             android:layout_margin="8dp"
@@ -50,28 +49,9 @@
                 <TextView
                     android:id="@+id/time"
                     android:textSize="16sp"
-                    android:layout_width="120dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="08:00 - 09:30"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginStart="5dp">
-                </TextView>
-
-
-                <ImageView
-                    android:layout_gravity="top"
-                    android:layout_width="wrap_content"
-                    android:layout_height="24dp"
-                    android:src="@drawable/ic_person_black_24dp">
-
-                </ImageView>
-
-                <TextView
-                    android:id="@+id/lecturer"
-                    android:textSize="16sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Prof. Dr. Karl-Friedrich Buhl"
+                    android:text="21.11.2019 09:45"
                     android:layout_marginLeft="5dp"
                     android:layout_marginStart="5dp">
                 </TextView>
@@ -83,30 +63,35 @@
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="3dp">
+                android:layout_marginTop="6dp">
 
                 <ImageView
-                    android:layout_gravity="top"
                     android:layout_width="wrap_content"
                     android:layout_height="24dp"
-                    android:src="@drawable/ic_location_on_black_24dp">
+                    android:src="@drawable/ic_person_black_24dp">
 
                 </ImageView>
 
                 <TextView
-                    android:id="@+id/room"
+                    android:id="@+id/lecturer"
                     android:textSize="16sp"
-                    android:layout_width="120dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="FB010"
+                    android:text="Prof. Dr. Matthias Meitner"
                     android:layout_marginLeft="5dp"
-                    android:layout_marginStart="5dp"
-                    >
+                    android:layout_marginStart="5dp">
                 </TextView>
 
 
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp">
+
                 <ImageView
-                    android:layout_gravity="top"
                     android:layout_width="wrap_content"
                     android:layout_height="24dp"
                     android:src="@drawable/ic_description_black_24dp">
@@ -114,15 +99,26 @@
                 </ImageView>
 
                 <TextView
-                    android:id="@+id/description"
+                    android:id="@+id/type"
                     android:textSize="16sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Übung"
+                    android:text="Raumänderung:"
+                    android:textColor="@color/universityBlue"
+                    android:textStyle="bold"
                     android:layout_marginLeft="5dp"
                     android:layout_marginStart="5dp">
                 </TextView>
 
+                <TextView
+                    android:id="@+id/value"
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="FA103"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp">
+                </TextView>
 
             </LinearLayout>
 

@@ -1,25 +1,51 @@
 package de.maaxgr.hochschule.hochschulappimprovements.fragment
 
-import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
 import androidx.viewpager.widget.ViewPager
 import de.maaxgr.hochschule.hochschulappimprovements.R
+import de.maaxgr.hochschule.hochschulappimprovements.entity.TimetableEntry
 import kotlinx.android.synthetic.main.fragment_timetable.*
-import android.widget.LinearLayout
+import kotlinx.android.synthetic.main.fragment_timetable_element.view.*
+import kotlinx.android.synthetic.main.fragment_timetable_tab.*
 
 class TimetableFragment : Fragment() {
 
     companion object {
         private const val ARG_OBJECT = "object"
         private val HEADER = arrayOf("MO", "DI", "MI", "DO", "FR")
+
+        private val TIMETABLE_ENTRIES = arrayOf(
+            TimetableEntry(
+                "Interface- und Interaction Design",
+                "08:00 - 09:30",
+                "FB010",
+                "Prof. Karl-Friedrich Buhl",
+                "Übung"
+            ),
+            TimetableEntry(
+                "Tablet Computing I",
+                "09:45 - 11:15",
+                "FB010",
+                "Prof. Dr. Sven Rill",
+                "Übung"
+            ),
+            TimetableEntry(
+                "Web Development I",
+                "11:30 - 13:00",
+                "FB004A",
+                "Prof. Dr. Sven Rill",
+                "Übung"
+            )
+        )
+
     }
 
     private lateinit var demoCollectionPagerAdapter: DemoCollectionPagerAdapter
@@ -95,8 +121,22 @@ class TimetableFragment : Fragment() {
 
         override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
             arguments?.takeIf { it.containsKey(ARG_OBJECT) }?.apply {
-                val textView: TextView = view.findViewById(R.id.textView2)
-                textView.text = getInt(ARG_OBJECT).toString()
+
+                TIMETABLE_ENTRIES.forEach {
+
+                    val element = layoutInflater.inflate(
+                        R.layout.fragment_timetable_element, null
+                    )
+                    val cardView = element.cardview
+
+                    cardView.title.text = it.subjectName
+                    cardView.time.text = it.time
+                    cardView.lecturer.text = it.lecturer
+                    cardView.description.text = it.description
+                    cardView.room.text = it.room
+
+                    entry_layout.addView(element)
+                }
             }
         }
     }
